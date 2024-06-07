@@ -162,3 +162,26 @@ header ul li i
         margin-left: 1em;
     }
 }
+
+@media (max-width: 768px) {
+    header
+    {
+        flex-wrap: wrap;
+    }
+    header ul {
+        align-items: flex-start;
+        margin-right: 0;
+    }
+
+    header ul li {
+        padding: 0.5em;
+        padding-right: 1em;
+        width: 100%;
+    }
+
+    header ul li a {
+        display: block;
+        width: 100%;
+        padding: 0.5em;
+    }
+}
