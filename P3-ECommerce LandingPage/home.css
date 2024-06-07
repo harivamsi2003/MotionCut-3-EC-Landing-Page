@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    min-height: 100vh;
+}
+
+header
+{
+    display: flex;
+    background: linear-gradient(35deg,rgb(39, 39, 232),rgb(32, 163, 85),rgb(147, 26, 147));
+    align-items: center;
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: antiquewhite;
+}
+
+header span
+{
+    flex-grow: 2;
+    margin-left: 3em;
+    font-weight: bold;
+}
+
+header ul
+{
+    display: flex;
+    align-items: flex-end;
+    list-style-type: none;
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+header ul li
+{
+    padding: 1em;
+    padding-right: 2.5em;
+}
+
+header ul li a
+{
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+header ul li i
+{
+    color: aliceblue;
+}
+
+.left
+{
+    width: 36%;
+    height: 34em;
+    margin-left: -1em;
+    position: relative;
+}
+
+.left .image
+{
+    background-image: url('https://th.bing.com/th/id/OIP.kUuqzM-uKH8phLjJvfRqHwHaHa?rs=1&pid=ImgDetMain');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container
+{
+    display: flex;
+}
+
+.container .right
+{
+    padding-top: 4em;
+    line-height: 2em;
+    justify-content: flex-end;
+    margin-left: 2em;
+}
+
+.container .right .description
+{
+    line-height: 3em;
+}
+
+.container .right button
+{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    font-family: cursive;
+    border-radius: 1em;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(64, 63, 63);
+    color: yellow;
+}
+
+.container .right button:hover
+{
+    color: white;
+    background-color: rgb(38, 43, 43);
+    box-shadow: 0px 0px 5px rgb(42, 0, 139);
+    transition: 500ms;
+}
+
+@media (max-width: 599px) {
+    .container {
+        flex-wrap: wrap;
+    }
+
+    .left, .right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .left {
+        height: auto;
+    }
+
+    .left .image
+    {
+        height: 30em;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container .right {
+        padding-top: 1em;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .container {
+        flex-wrap: nowrap;
+    }
+
+    .left, .right {
+        flex: 1;
+    }
+
+    .left .image {
+        height: 100%;
+    }
+}
+
+@media (min-width: 900px) {
+    header span {
+        font-size: 1.5em;
+    }
+
+    .left {
+        width: 40%;
+    }
+
+    .right {
+        width: 50%;
+        margin-left: 1em;
+    }
+}
